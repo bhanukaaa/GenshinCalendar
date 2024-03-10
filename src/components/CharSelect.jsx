@@ -3,22 +3,6 @@ import Char from "./Char";
 import classes from "./CharSelect.module.css";
 
 function CharSelect({ charList, onClose, onCharSelect, onConfirm }) {
-  // const [charList, setCharList] = useState(Characters);
-
-  // function charSelectHandler(charID) {
-  //   if (!charList[charID].selected) {
-  //     setCharList((prevCharList) => ({
-  //       ...prevCharList,
-  //       [charID]: { ...prevCharList[charID], selected: true },
-  //     }));
-  //   } else {
-  //     setCharList((prevCharList) => ({
-  //       ...prevCharList,
-  //       [charID]: { ...prevCharList[charID], selected: false },
-  //     }));
-  //   }
-  // }
-
   function submitHandler(event) {
     event.preventDefault();
     onConfirm();

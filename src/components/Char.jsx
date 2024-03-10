@@ -2,7 +2,7 @@ import React from "react";
 import classes from "./Char.module.css";
 
 function Char({ id, name, displayName, selected, onCharClick, element }) {
-  const iconPath = "../ui-avataricon-" + name + ".png";
+  const iconPath = "../GenshinCalendar/ui-avataricon-" + name + ".png";
 
   let className;
   switch (element) {
