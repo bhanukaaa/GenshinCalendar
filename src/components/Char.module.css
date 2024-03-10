@@ -1,0 +1,49 @@
+img {
+  height: 120px;
+  width: 120px;
+  border-radius: 10px;
+}
+
+p {
+  margin-top: 0;
+  font-weight: bold;
+  margin-bottom: auto;
+}
+
+.active {
+  color: green;
+}
+
+.inactive {
+  color: white;
+}
+
+.activeIMG {
+  background-color: darkgray;
+}
+
+/* .inactiveIMG {
+
+} */
+
+.pyro {
+  border: 2px solid red;
+}
+.hydro {
+  border: 2px solid blue;
+}
+.electro {
+  border: 2px solid purple;
+}
+.cryo {
+  border: 2px solid rgb(0, 208, 255);
+}
+.anemo {
+  border: 2px solid rgb(0, 255, 191);
+}
+.geo {
+  border: 2px solid yellow;
+}
+.dendro {
+  border: 2px solid green;
+}

@@ -1,0 +1,17 @@
+.table {
+    width: 100%;
+}
+
+.table th, .table td {
+    padding: 10px;
+    text-align: left;
+}
+
+.table th {
+    background-color: #333;
+    color: #fff;
+}
+
+.table tr:hover {
+    background-color: #dddddd31;
+}
