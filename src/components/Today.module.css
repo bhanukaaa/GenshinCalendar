@@ -1,10 +1,11 @@
 .table {
     width: 100%;
+    font-size: large;
 }
 
 .table th, .table td {
     padding: 10px;
-    text-align: left;
+    text-align: center;
 }
 
 .table th {
@@ -14,4 +15,18 @@
 
 .table tr:hover {
     background-color: #dddddd31;
+}
+
+.portraitImg {
+    width: 120px
+}
+
+.character th {
+    width: 40%;
+}
+.material th {
+    width: 40%;
+}
+.domain th {
+    width: 20%;
 }

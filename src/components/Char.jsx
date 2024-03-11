@@ -1,9 +1,8 @@
 import React from "react";
 import classes from "./Char.module.css";
+import Portrait from "./Portrait";
 
 function Char({ id, name, displayName, selected, onCharClick, element }) {
-  const iconPath = "../GenshinCalendar/ui-avataricon-" + name + ".png";
-
   let className;
   switch (element) {
     case "pyro":
@@ -35,7 +34,7 @@ function Char({ id, name, displayName, selected, onCharClick, element }) {
 
   return (
     <div onClick={clickHandler}>
-      <img src={iconPath} className={className} />
+      <Portrait name={name} classIn={className} />
       <p className={selected ? classes.active : classes.inactive}>
         {displayName}
       </p>

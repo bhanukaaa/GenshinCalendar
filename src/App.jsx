@@ -23,7 +23,6 @@ function App() {
         ...prevCharList,
         [charID]: { ...prevCharList[charID], selected: false },
       }));
-
     }
   }
 
@@ -33,7 +32,7 @@ function App() {
   const [TodayData, setTodayData] = useState([]);
 
   function updateToday() {
-    console.log("Update Today")
+    console.log("Update Today");
     const filteredTodayData = [...TodayData].filter(
       (character) =>
         charList[character.name] && charList[character.name].selected
@@ -44,7 +43,9 @@ function App() {
         let currMat = charList[i].material;
         if (matList[currMat].day.includes(todayDay)) {
           filteredTodayData.push({
-            name: charList[i].displayName,
+            name: charList[i].name,
+            dName: charList[i].displayName,
+            matName: currMat,
             mat: matList[currMat].name,
             domain: matList[currMat].domain,
           });
