@@ -5,6 +5,9 @@ import Modal from "./components/Modal";
 import Today from "./components/Today";
 import Characters from "./data/Characters";
 import Materials from "./data/Materials";
+import Paimon from "../public/paimon.png";
+import WeeklyDist from "./components/WeeklyDist";
+import Footer from "./components/Footer";
 
 function App() {
   const matList = Materials;
@@ -31,8 +34,17 @@ function App() {
   const todayDay = todayDate.getDay();
   const [TodayData, setTodayData] = useState([]);
 
+  const todayDayDisplay = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ][todayDay];
+
   function updateToday() {
-    console.log("Update Today");
     const filteredTodayData = [...TodayData].filter(
       (character) =>
         charList[character.name] && charList[character.name].selected
@@ -56,6 +68,53 @@ function App() {
     setTodayData(filteredTodayData);
   }
 
+  // Weekly Distribution Component
+  const [weeklyData, setWeeklyData] = useState({
+    1: [],
+    2: [],
+    3: [],
+    4: [],
+    5: [],
+    6: [],
+  });
+
+  function updateWeekly() {
+    const filteredWeeklyData = { ...weeklyData };
+
+    for (let i = 0; i < Object.keys(charList).length; i++) {
+      const character = charList[i];
+      if (!character.selected) {
+        for (let j = 1; j < 7; j++) {
+          const indexToRemove = filteredWeeklyData[j].indexOf(character.name);
+          if (indexToRemove !== -1) {
+            filteredWeeklyData[j].splice(indexToRemove, 1);
+          }
+        }
+      }
+    }
+
+    for (let i = 0; i < Object.keys(charList).length; i++) {
+      if (charList[i].selected) {
+        let currMat = charList[i].material;
+        for (let j = 1; j < 7; j++) {
+          if (matList[currMat].day.includes(j)) {
+            if (!filteredWeeklyData[j].includes(charList[i].name)) {
+              filteredWeeklyData[j].push(charList[i].name);
+            }
+          }
+        }
+      }
+    }
+
+    setWeeklyData(filteredWeeklyData);
+  }
+
+  // Update
+  function updateData() {
+    updateToday();
+    updateWeekly();
+  }
+
   // Toggling Modal
   const [charSelectActive, setCharSelectActive] = useState(false);
 
@@ -76,16 +135,41 @@ function App() {
             onClose={toggleCharSelect}
             charList={charList}
             onCharSelect={charSelectHandler}
-            onConfirm={updateToday}
+            onConfirm={updateData}
           />
         </Modal>
       )}
       <header>
         <button onClick={toggleCharSelect}>Select Characters</button>
       </header>
+      <br />
+      <hr />
       <main>
-        <Today data={TodayData} />
+        <div>
+          <h1>Farmable Today ({todayDayDisplay})</h1>
+          {TodayData.length > 0 ? (
+            <Today data={TodayData} />
+          ) : (
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                alignItems: "center",
+              }}
+            >
+              <img src={Paimon} style={{ height: 150 }} />
+              <h3>No Selected Characters are Farmable Today</h3>
+            </div>
+          )}
+          <br />
+        </div>
+        <hr />
+        <div>
+          <h1>Weekly Distribution</h1>
+          <WeeklyDist data={weeklyData} />
+        </div>
       </main>
+      <Footer />
     </>
   );
 }

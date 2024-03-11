@@ -1,0 +1,8 @@
+.group {
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+
+h2, h3 {
+    padding-left: 25px;
+}
