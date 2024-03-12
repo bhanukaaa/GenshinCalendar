@@ -440,105 +440,105 @@ const Characters = {
     selected: false,
     material: "admonition",
   },
-  68: {
+  63: {
     name: "venti",
     displayName: "Venti",
     element: "anemo",
     selected: false,
     material: "ballad",
   },
-  69: {
+  64: {
     name: "wanderer",
     displayName: "Wanderer",
     element: "anemo",
     selected: false,
     material: "praxis",
   },
-  70: {
+  65: {
     name: "wriothesley",
     displayName: "Wriothesley",
     element: "cryo",
     selected: false,
     material: "order",
   },
-  71: {
+  66: {
     name: "xiangling",
     displayName: "Xiangling",
     element: "pyro",
     selected: false,
     material: "diligence",
   },
-  72: {
+  67: {
     name: "xianyun",
     displayName: "Xianyun",
     element: "anemo",
     selected: false,
     material: "diligence",
   },
-  73: {
+  68: {
     name: "xiao",
     displayName: "Xiao",
     element: "anemo",
     selected: false,
     material: "prosperity",
   },
-  74: {
+  69: {
     name: "xingqiu",
     displayName: "Xingqiu",
     element: "hydro",
     selected: false,
     material: "prosperity",
   },
-  75: {
+  70: {
     name: "xinyan",
     displayName: "Xinyan",
     element: "pyro",
     selected: false,
     material: "prosperity",
   },
-  76: {
+  71: {
     name: "miko",
     displayName: "Yae Miko",
     element: "electro",
     selected: false,
     material: "light",
   },
-  77: {
+  72: {
     name: "yanfei",
     displayName: "Yanfei",
     element: "pyro",
     selected: false,
     material: "light",
   },
-  78: {
+  73: {
     name: "yaoyao",
     displayName: "Yaoyao",
     element: "dendro",
     selected: false,
     material: "diligence",
   },
-  79: {
+  74: {
     name: "yelan",
     displayName: "Yelan",
     element: "hydro",
     selected: false,
     material: "prosperity",
   },
-  80: {
+  75: {
     name: "yoimiya",
     displayName: "Yoimiya",
     element: "pyro",
     selected: false,
     material: "transience",
   },
-  81: {
+  76: {
     name: "yunjin",
     displayName: "Yun Jin",
     element: "geo",
     selected: false,
     material: "diligence",
   },
-  82: {
+  77: {
     name: "zhongli",
     displayName: "Zhongli",
     element: "geo",
