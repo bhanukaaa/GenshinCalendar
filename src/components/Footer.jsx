@@ -7,8 +7,8 @@ const Footer = () => {
       <div className="footer-container">
         <div className="footer-content">
           <p>
-            &copy; {new Date().getFullYear()} Bhanuka Siriwardana. Any Rights
-            Reserved (hopefully).
+            Not &copy; {new Date().getFullYear()} Bhanuka Siriwardana. No Rights
+            Reserved (i think)
           </p>
           <p>Not Affliated with miHoYo</p>
           <p>
