@@ -22,12 +22,12 @@ function Today({ data }) {
             <td className={classes.portraitImg}>
               <Portrait name={rowObject.name} />
             </td>
-            <td>{rowObject.dName}</td>
+            <td className={classes.displayText}>{rowObject.dName}</td>
             <td className={classes.portraitImg}>
               <Portrait name={rowObject.matName} />
             </td>
-            <td>{rowObject.mat}</td>
-            <td>{rowObject.domain}</td>
+            <td className={classes.displayText}>{rowObject.mat}</td>
+            <td className={classes.displayText}>{rowObject.domain}</td>
           </tr>
         </tbody>
       ))}

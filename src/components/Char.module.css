@@ -1,3 +1,7 @@
+.selection {
+  text-align: center;
+}
+
 p {
   margin-top: 0;
   font-weight: bold;
@@ -5,20 +9,16 @@ p {
 }
 
 .active {
-  color: green;
+  color: rgb(82, 252, 82);
+  max-width: 150px;
+  overflow-wrap: break-word;
 }
 
-/* .inactive {
+.inactive {
   color: white;
-} */
-
-.activeIMG {
-  background-color: darkgray;
+  max-width: 150px;
+  overflow-wrap: break-word;
 }
-
-/* .inactiveIMG {
-
-} */
 
 .pyro {
   border: 2px solid red;

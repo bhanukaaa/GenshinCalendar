@@ -1,4 +1,5 @@
 import React from "react";
+import classes from "./Portrait.module.css";
 
 function Portrait({ name, classIn }) {
   const materials = [
@@ -19,7 +20,7 @@ function Portrait({ name, classIn }) {
     "order",
   ];
 
-  let iconPath = ""
+  let iconPath = "";
 
   if (materials.includes(name)) {
     iconPath = "../GenshinCalendar/materials/" + name + ".png";
@@ -28,11 +29,14 @@ function Portrait({ name, classIn }) {
   }
 
   return (
-    <img
-      src={iconPath}
-      className={classIn}
-      style={{ height: 120, width: 120 }}
-    />
+    <div className={classes.shrink}>
+      <img
+        src={iconPath}
+        className={classIn}
+        style={{ height: 120, width: 120 }}
+        title={name}
+      />
+    </div>
   );
 }
 

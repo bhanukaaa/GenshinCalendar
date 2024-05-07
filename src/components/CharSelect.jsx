@@ -10,7 +10,7 @@ function CharSelect({ charList, onClose, onCharSelect, onConfirm }) {
   }
 
   return (
-    <div>
+    <div className={classes.selectModal}>
       <button onClick={submitHandler} className={classes.confirm}>
         Confirm
       </button>

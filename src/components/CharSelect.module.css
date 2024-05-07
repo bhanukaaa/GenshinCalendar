@@ -1,5 +1,10 @@
+.selectModal {
+    text-align: center;
+}
+
 ul {
     list-style-type: none;
+    padding: 0;
     display: grid;
     gap: 15px;
 }

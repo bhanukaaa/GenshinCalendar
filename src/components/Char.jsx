@@ -33,7 +33,7 @@ function Char({ id, name, displayName, selected, onCharClick, element }) {
   }
 
   return (
-    <div onClick={clickHandler}>
+    <div onClick={clickHandler} className={classes.selection}>
       <Portrait name={name} classIn={className} />
       <p className={selected ? classes.active : classes.inactive}>
         {displayName}
