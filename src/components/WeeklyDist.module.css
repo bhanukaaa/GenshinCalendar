@@ -1,8 +1,17 @@
 .group {
-    border: 1px solid gray;
-    border-radius: 10px;
+  border-radius: 10px;
+  padding: 10px;
 }
 
-h2, h3 {
-    padding-left: 25px;
+.heading {
+  padding-left: 20px;
+}
+
+.week {
+  border: 1px solid;
+  padding: 10px;
+}
+
+.portraitContainer {
+  display: flex;
 }

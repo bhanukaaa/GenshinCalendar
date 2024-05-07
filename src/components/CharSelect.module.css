@@ -1,33 +1,38 @@
 .selectModal {
-    text-align: center;
+  text-align: center;
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
-    display: grid;
-    gap: 15px;
+.charsUL {
+  list-style-type: none;
+  padding: 0;
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 @media (min-width: 768px) {
-    ul {
-        grid-template-columns: repeat(5, 1fr);
-    }
+  .charsUL {
+    grid-template-columns: repeat(5, 1fr);
+  }
 }
 
 @media (min-width: 1024px) {
-    ul {
-        grid-template-columns: repeat(6, 1fr);
-    }
+  .charsUL {
+    grid-template-columns: repeat(6, 1fr);
+  }
 }
 
 @media (min-width: 1280px) {
-    ul {
-        grid-template-columns: repeat(7, 1fr);
-    }
+  .charsUL {
+    grid-template-columns: repeat(7, 1fr);
+  }
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
 }
 
 .confirm {
-    margin:0 auto;
-    display:block;
+  margin-right: 10px;
 }

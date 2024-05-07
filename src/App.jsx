@@ -11,6 +11,7 @@ import Footer from "./components/Footer";
 
 function App() {
   const matList = Materials;
+  const [sortType, setSortType] = useState("A → Z");
 
   // Character Selection Status Handling
   const [charList, setCharList] = useState(Characters);
@@ -66,6 +67,36 @@ function App() {
     }
 
     setTodayData(filteredTodayData);
+  }
+
+  function sortCharListByElement() {
+    const sortedList = Object.values(charList).sort((a, b) => {
+      if (a.element > b.element) return -1;
+      if (a.element < b.element) return 1;
+      return 0;
+    });
+
+    setCharList(sortedList);
+  }
+
+  function sortCharListAlphabetically() {
+    const sortedList = Object.values(charList).sort((a, b) => {
+      if (a.name < b.name) return -1;
+      if (a.name > b.name) return 1;
+      return 0;
+    });
+
+    setCharList(sortedList);
+  }
+
+  function toggleSort() {
+    if (sortType === "A → Z") {
+      sortCharListByElement();
+      setSortType("Element");
+    } else if (sortType === "Element") {
+      sortCharListAlphabetically();
+      setSortType("A → Z");
+    }
   }
 
   // Weekly Distribution Component
@@ -132,15 +163,37 @@ function App() {
       {charSelectActive && (
         <Modal onClose={toggleCharSelect}>
           <CharSelect
+            onSort={toggleSort}
             onClose={toggleCharSelect}
             charList={charList}
             onCharSelect={charSelectHandler}
             onConfirm={updateData}
+            currSortType={sortType}
           />
         </Modal>
       )}
-      <header>
-        <button onClick={toggleCharSelect}>Select Characters</button>
+      <header style={{ display: "flex", justifyContent: "space-between" }}>
+        <div>
+          <button onClick={toggleCharSelect}>Select Characters</button>
+        </div>
+        <div>
+          <button
+            onClick={() =>
+              (window.location.href = "https://genshin.hoyoverse.com/en/")
+            }
+          >
+            Genshin Impact
+          </button>
+          <button
+            style={{ marginLeft: "10px" }}
+            onClick={() =>
+              (window.location.href =
+                "https://github.com/bhanukaaa/GenshinCalendar")
+            }
+          >
+            GitHub Page
+          </button>
+        </div>
       </header>
       <br />
       <hr />
