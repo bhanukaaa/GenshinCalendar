@@ -14,7 +14,6 @@
 .table th {
   background-color: #333;
   color: #fff;
-  border: 1px solid black;
 }
 
 .table tr:hover {
@@ -25,13 +24,12 @@
   width: 120px;
 }
 
-.character th {
+.character,
+.material {
   width: 40%;
 }
-.material th {
-  width: 40%;
-}
-.domain th {
+
+.domain {
   width: 20%;
 }
 
@@ -39,3 +37,4 @@
   font-weight: bolder;
   font-size: larger;
 }
+
