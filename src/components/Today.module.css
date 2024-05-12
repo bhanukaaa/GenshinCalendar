@@ -8,16 +8,16 @@
 .table td {
   padding: 10px;
   text-align: center;
-  border: 1px solid black;
+  border: 1px solid rgb(114, 114, 114);
 }
 
 .table th {
-  background-color: #333;
+  background-color: #1e1e1e;
   color: #fff;
 }
 
 .table tr:hover {
-  background-color: #dddddd31;
+  background-color: #20202093;
 }
 
 .portraitImg {
@@ -36,5 +36,6 @@
 .displayText {
   font-weight: bolder;
   font-size: larger;
+  min-width: 200px;
 }
 

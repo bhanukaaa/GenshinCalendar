@@ -8,10 +8,20 @@
 }
 
 .week {
-  border: 1px solid;
+  border: 1px solid rgb(102, 102, 102);
   padding: 10px;
 }
 
 .portraitContainer {
+  margin-left: 9px;
+  margin-right: 9px;
   display: flex;
+  flex-wrap: wrap;
+}
+
+.image {
+  background-color: rgb(30, 30, 30);
+  border: 1px dashed rgb(78, 78, 78);
+  border-radius: 10px;
+  margin: 2px;
 }

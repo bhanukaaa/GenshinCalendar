@@ -7,7 +7,7 @@ function Today({ data }) {
     <table className={classes.table}>
       <thead>
         <tr>
-          <th colSpan={2} className={classes.character}>
+          <th colSpan={2} className={classes.material}>
             Character
           </th>
           <th colSpan={2} className={classes.material}>
@@ -16,9 +16,9 @@ function Today({ data }) {
           <th className={classes.domain}>Domain</th>
         </tr>
       </thead>
-      {data.map((rowObject) => (
-        <tbody key={rowObject.name}>
-          <tr>
+      <tbody>
+        {data.map((rowObject) => (
+          <tr key={rowObject.name}>
             <td className={classes.portraitImg}>
               <Portrait name={rowObject.name} />
             </td>
@@ -29,8 +29,8 @@ function Today({ data }) {
             <td className={classes.displayText}>{rowObject.mat}</td>
             <td className={classes.displayText}>{rowObject.domain}</td>
           </tr>
-        </tbody>
-      ))}
+        ))}
+      </tbody>
     </table>
   );
 }

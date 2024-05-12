@@ -17,11 +17,11 @@ function WeeklyDist(data) {
 
   for (let i = 1; i < 7; i++) {
     weekElements.push(
-      <div className={classes.week}>
+      <div className={classes.week} key={i}>
         <h2 className={classes.heading}>{days[i]}</h2>
         <div className={classes.portraitContainer}>
           {data["data"][i].length > 0 ? (
-            data["data"][i].map((char) => <Portrait name={char} key={char} />)
+            data["data"][i].map((char) => <Portrait name={char} key={char} classIn={classes.image}/>)
           ) : (
             <h3 className={classes.heading}>
               No Selected Characters are Farmable on This Day

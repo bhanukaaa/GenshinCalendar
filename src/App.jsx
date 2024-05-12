@@ -199,7 +199,7 @@ function App() {
       <hr />
       <main>
         <div>
-          <h1>Farmable Today ({todayDayDisplay})</h1>
+          <h1 style={{paddingLeft: "15px"}}>Farmable Today ({todayDayDisplay})</h1>
           {TodayData.length > 0 ? (
             <Today data={TodayData} />
           ) : (
@@ -218,7 +218,7 @@ function App() {
         </div>
         <hr />
         <div>
-          <h1>Weekly Distribution</h1>
+          <h1 style={{paddingLeft: "15px"}}>Weekly Distribution</h1>
           <WeeklyDist data={weeklyData} />
         </div>
       </main>
