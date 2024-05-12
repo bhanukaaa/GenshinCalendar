@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 import CharSelect from "./components/CharSelect";
 import Modal from "./components/Modal";
@@ -13,24 +13,38 @@ function App() {
   const matList = Materials;
   const [sortType, setSortType] = useState("A → Z");
 
-  // Character Selection Status Handling
+  // character selection status handling
   const [charList, setCharList] = useState(Characters);
 
-  function charSelectHandler(charID) {
-    if (!charList[charID].selected) {
-      setCharList((prevCharList) => ({
-        ...prevCharList,
-        [charID]: { ...prevCharList[charID], selected: true },
-      }));
-    } else {
-      setCharList((prevCharList) => ({
-        ...prevCharList,
-        [charID]: { ...prevCharList[charID], selected: false },
-      }));
+  // refresh on update to charlist
+  useEffect(() => {
+    if (charList) {
+      updateData();
     }
+  }, [charList]);
+
+  // toggle selection flag
+  function charSelectHandler(charID) {
+    setCharList((prevCharList) => {
+      const updatedCharList = { ...prevCharList };
+      updatedCharList[charID] = {
+        ...updatedCharList[charID],
+        selected: !updatedCharList[charID].selected,
+      };
+      localStorage.setItem("charList", JSON.stringify(updatedCharList));
+      return updatedCharList;
+    });
   }
 
-  // TODAY Component
+  // local storage loading
+  const loadFromLS = () => {
+    const savedCharList = JSON.parse(localStorage.getItem("charList"));
+    if (savedCharList) {
+      setCharList(savedCharList);
+    }
+  };
+
+  // TODAY component
   const todayDate = new Date();
   const todayDay = todayDate.getDay();
   const [TodayData, setTodayData] = useState([]);
@@ -99,7 +113,7 @@ function App() {
     }
   }
 
-  // Weekly Distribution Component
+  // weekly distribution component
   const [weeklyData, setWeeklyData] = useState({
     1: [],
     2: [],
@@ -140,13 +154,13 @@ function App() {
     setWeeklyData(filteredWeeklyData);
   }
 
-  // Update
+  // update
   function updateData() {
     updateToday();
     updateWeekly();
   }
 
-  // Toggling Modal
+  // toggling modal
   const [charSelectActive, setCharSelectActive] = useState(false);
 
   function toggleCharSelect() {
@@ -157,7 +171,7 @@ function App() {
     }
   }
 
-  // Content Displayed
+  // content displayed
   return (
     <>
       {charSelectActive && (
@@ -175,6 +189,9 @@ function App() {
       <header style={{ display: "flex", justifyContent: "space-between" }}>
         <div>
           <button onClick={toggleCharSelect}>Select Characters</button>
+          <button onClick={loadFromLS} style={{ marginLeft: "10px" }}>
+            Load Saved
+          </button>
         </div>
         <div>
           <button
@@ -199,7 +216,7 @@ function App() {
       <hr />
       <main>
         <div>
-          <h1 style={{paddingLeft: "15px"}}>Farmable Today ({todayDayDisplay})</h1>
+          <h1>Farmable Today ({todayDayDisplay})</h1>
           {TodayData.length > 0 ? (
             <Today data={TodayData} />
           ) : (
@@ -218,7 +235,7 @@ function App() {
         </div>
         <hr />
         <div>
-          <h1 style={{paddingLeft: "15px"}}>Weekly Distribution</h1>
+          <h1>Weekly Distribution</h1>
           <WeeklyDist data={weeklyData} />
         </div>
       </main>
