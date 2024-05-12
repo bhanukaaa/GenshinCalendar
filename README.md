@@ -4,11 +4,11 @@ A single page React application, to track character farming on Genshin Impact. <
 <br/>
 <br/>
 
-# Live Demo
+## Live Demo
 ### [bhanukaaa.github.io/GenshinCalendar](https://bhanukaaa.github.io/GenshinCalendar)
 <br/>
 
-# Features
+## Features
 
 - **Character Selection**: Choose desired characters from a user-friendly pop-up GUI.
 - **Sorting Options**: Sort characters alphabetically or by element for easy selection.
@@ -17,7 +17,7 @@ A single page React application, to track character farming on Genshin Impact. <
 - **Local Storage Integration**: Save and load your character selections for quick access.
 <br/>
 
-# Usage
+## Usage
 
 1. **Character Selection**:
    - Upon clicking the "Select Characters" button, a pop-up GUI will be presented which can be used to select characters you want information on.
