@@ -1,5 +1,6 @@
 # Genshin Weekly Calendar
-A single page React application, to track character farming on Genshin Impact.
+A single page React application, to track character farming on Genshin Impact. <br/>
+***Note: not optimized to display correctly on mobile***
 <br/>
 <br/>
 
