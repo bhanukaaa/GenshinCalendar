@@ -4,8 +4,8 @@ A single page React application, to track character farming on Genshin Impact. <
 <br/>
 <br/>
 
-# Demo
-### Live Demo: [bhanukaaa.github.io/GenshinCalendar](https://bhanukaaa.github.io/GenshinCalendar)
+# Live Demo
+### [bhanukaaa.github.io/GenshinCalendar](https://bhanukaaa.github.io/GenshinCalendar)
 <br/>
 
 # Features
