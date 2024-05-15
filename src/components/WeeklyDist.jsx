@@ -38,9 +38,9 @@ function WeeklyDist(data) {
 
       <div className={classes.week}>
         <h2 className={classes.heading}>Sunday</h2>
-        <h3 className={classes.heading}>
+        <h4 className={classes.heading}>
           All Characters are Farmable on This Day
-        </h3>
+        </h4>
       </div>
     </div>
   );
