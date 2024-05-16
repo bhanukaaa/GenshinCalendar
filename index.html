@@ -1,14 +1,36 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/GenshinCalendar/favicon.webp">
+    <link rel="icon" type="image/png" href="/GenshinCalendar/favicon.webp" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Genshin Weekly Calender</title>
-    <script type="module" crossorigin src="/GenshinCalendar/assets/index-DgdZZRke.js"></script>
-    <link rel="stylesheet" crossorigin href="/GenshinCalendar/assets/index-DSA6pxsg.css">
+    <style>
+
+      .parallax {
+        background-image: url("/GenshinCalendar/background.png");
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        overflow: auto;
+      }
+
+      .main {
+        background-color: rgba(0, 0, 0, 0.8);
+        color: rgb(219, 219, 219);
+        padding: 20px;
+        width: 100%;
+      }
+    </style>
+    <script type="module" crossorigin src="/GenshinCalendar/assets/index-DNk5-dRf.js"></script>
+    <link rel="stylesheet" crossorigin href="/GenshinCalendar/assets/index-DmwBBmj3.css">
   </head>
   <body>
-    <div id="root"></div>
+    <div class="parallax">
+      <div class="main">
+        <div id="root"></div>
+      </div>
+    </div>
   </body>
 </html>
