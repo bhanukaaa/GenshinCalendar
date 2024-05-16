@@ -1,13 +1,35 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/favicon.webp">
+    <link rel="icon" type="image/png" href="/favicon.webp" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Genshin Weekly Calender</title>
+    <style>
+
+      .parallax {
+        background-image: url("/background.png");
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        overflow: auto;
+      }
+
+      .main {
+        background-color: rgba(0, 0, 0, 0.8);
+        color: rgb(219, 219, 219);
+        padding: 20px;
+        width: 100%;
+      }
+    </style>
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <div class="parallax">
+      <div class="main">
+        <div id="root"></div>
+        <script type="module" src="/src/main.jsx"></script>
+      </div>
+    </div>
   </body>
 </html>

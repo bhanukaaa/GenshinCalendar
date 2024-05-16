@@ -21,7 +21,10 @@ function WeeklyDist(data) {
       <div className={classes.week} key={i}>
         <h2
           className={classes.heading}
-          style={{ color: i === currDay ? "rgb(255, 109, 109)" : "white" }}
+          style={{
+            color: i === currDay ? "rgb(245, 120, 120)" : "rgb(200, 200, 200)",
+            textTransform: i === currDay ? "uppercase" : "capitalize"
+          }}
         >
           {days[i]}
         </h2>

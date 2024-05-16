@@ -1,5 +1,5 @@
 .footer {
-  background-color: #0f0f0f;
+  /* background-color: #0f0f0f; */
   padding: 20px 0;
 }
 
@@ -15,5 +15,7 @@
 }
 
 .footer-content p {
+  font-weight: 300;
+  font-size: medium;
   margin: 5px 0;
 }
