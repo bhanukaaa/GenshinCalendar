@@ -14,14 +14,22 @@ function WeeklyDist(data) {
   ];
 
   let weekElements = [];
+  const currDay = new Date().getDay();
 
   for (let i = 1; i < 7; i++) {
     weekElements.push(
       <div className={classes.week} key={i}>
-        <h2 className={classes.heading}>{days[i]}</h2>
+        <h2
+          className={classes.heading}
+          style={{ color: i === currDay ? "rgb(255, 109, 109)" : "white" }}
+        >
+          {days[i]}
+        </h2>
         <div className={classes.portraitContainer}>
           {data["data"][i].length > 0 ? (
-            data["data"][i].map((char) => <Portrait name={char} key={char} classIn={classes.image}/>)
+            data["data"][i].map((char) => (
+              <Portrait name={char} key={char} classIn={classes.image} />
+            ))
           ) : (
             <h3 className={classes.heading}>
               No Selected Characters are Farmable on This Day
@@ -38,9 +46,9 @@ function WeeklyDist(data) {
 
       <div className={classes.week}>
         <h2 className={classes.heading}>Sunday</h2>
-        <h4 className={classes.heading}>
+        <h3 className={classes.heading}>
           All Characters are Farmable on This Day
-        </h4>
+        </h3>
       </div>
     </div>
   );
