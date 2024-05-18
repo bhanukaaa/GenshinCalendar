@@ -22,8 +22,8 @@ function WeeklyDist(data) {
         <h2
           className={classes.heading}
           style={{
-            color: i === currDay ? "rgb(245, 120, 120)" : "rgb(200, 200, 200)",
-            textTransform: i === currDay ? "uppercase" : "capitalize"
+            color: i === currDay ? "rgb(245, 120, 120)" : "rgb(220, 220, 220)",
+            // textTransform: i === currDay ? "uppercase" : "capitalize",
           }}
         >
           {days[i]}
@@ -49,9 +49,11 @@ function WeeklyDist(data) {
 
       <div className={classes.week}>
         <h2 className={classes.heading}>Sunday</h2>
-        <h3 className={classes.heading}>
-          All Characters are Farmable on This Day
-        </h3>
+        <div className={classes.portraitContainer}>
+          <h3 className={classes.heading}>
+            All Characters are Farmable on This Day
+          </h3>
+        </div>
       </div>
     </div>
   );

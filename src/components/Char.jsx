@@ -34,8 +34,16 @@ function Char({ id, name, displayName, selected, onCharClick, element }) {
 
   return (
     <div onClick={clickHandler} className={classes.selection}>
-      <Portrait name={name} classIn={className} />
-      <p className={selected ? classes.active : classes.inactive}>
+      <Portrait name={name} classIn={className} selected={selected} />
+      <p
+        className={selected ? classes.active : classes.inactive}
+        style={{
+          maxWidth: "150px",
+          overflowWrap: "break-word",
+          marginTop: "0",
+          marginBottom: "auto",
+        }}
+      >
         {displayName}
       </p>
     </div>

@@ -3,12 +3,12 @@
 const Materials = {
   ballad: {
     name: "Philosophies of Ballad",
-    day: [0, 2, 5],
+    day: [0, 3, 6],
     domain: "Cecilia Garden",
   },
   freedom: {
     name: "Philosophies of Freedom",
-    day: [0, 3, 6],
+    day: [0, 1, 4],
     domain: "Forsaken Rift",
   },
   resistance: {
@@ -23,22 +23,22 @@ const Materials = {
   },
   diligence: {
     name: "Philosophies of Diligence",
-    day: [0, 1, 4],
+    day: [0, 2, 5],
     domain: "Taishan Mansion",
   },
   gold: {
     name: "Philosophies of Gold",
-    day: [0, 2, 5],
+    day: [0, 3, 6],
     domain: "Cecilia Garden",
   },
   transience: {
     name: "Philosophies of Transience",
-    day: [0, 3, 6],
+    day: [0, 1, 4],
     domain: "Violet Court",
   },
   elegance: {
     name: "Philosophies of Elegance",
-    day: [0, 3, 6],
+    day: [0, 2, 5],
     domain: "Court of Flowing Sand",
   },
   light: {

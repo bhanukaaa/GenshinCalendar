@@ -216,7 +216,13 @@ function App() {
       <hr />
       <main>
         <div>
-          <h1>Farmable Today (<span style={{"color": "rgb(245, 120, 120)"}}>{todayDayDisplay}</span>)</h1>
+          <h1>
+            Farmable Today (
+            <span style={{ color: "rgb(245, 120, 120)" }}>
+              {todayDayDisplay}
+            </span>
+            )
+          </h1>
           {TodayData.length > 0 ? (
             <Today data={TodayData} />
           ) : (

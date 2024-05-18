@@ -2,7 +2,14 @@ import React from "react";
 import Char from "./Char";
 import classes from "./CharSelect.module.css";
 
-function CharSelect({ charList, onClose, onCharSelect, onConfirm, onSort, currSortType }) {
+function CharSelect({
+  charList,
+  onClose,
+  onCharSelect,
+  onConfirm,
+  onSort,
+  currSortType,
+}) {
   function submitHandler(event) {
     event.preventDefault();
     onConfirm();
@@ -24,7 +31,7 @@ function CharSelect({ charList, onClose, onCharSelect, onConfirm, onSort, currSo
           Sort ({currSortType})
         </button>
       </div>
-      <ul className={classes.charsUL}>
+      <ul className={classes.charsUL} style={{ padding: "10px" }}>
         {Object.keys(charList).map((charID) => (
           <li key={charID}>
             <Char

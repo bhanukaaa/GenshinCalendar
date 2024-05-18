@@ -2,22 +2,14 @@
   text-align: center;
 }
 
-p {
-  margin-top: 0;
-  font-weight: bold;
-  margin-bottom: auto;
-}
-
 .active {
   color: rgb(82, 252, 82);
-  max-width: 150px;
-  overflow-wrap: break-word;
+  font-weight: bolder;
 }
 
 .inactive {
+  font-weight: normal;
   color: white;
-  max-width: 150px;
-  overflow-wrap: break-word;
 }
 
 .pyro {
