@@ -34,7 +34,7 @@ function WeeklyDist(data) {
               <Portrait name={char} key={char} classIn={classes.image} />
             ))
           ) : (
-            <h3 className={classes.heading}>
+            <h3 className={classes.regText}>
               No Selected Characters are Farmable on This Day
             </h3>
           )}
@@ -50,7 +50,7 @@ function WeeklyDist(data) {
       <div className={classes.week}>
         <h2 className={classes.heading}>Sunday</h2>
         <div className={classes.portraitContainer}>
-          <h3 className={classes.heading}>
+          <h3 className={classes.regText}>
             All Characters are Farmable on This Day
           </h3>
         </div>

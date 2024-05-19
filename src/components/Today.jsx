@@ -7,7 +7,7 @@ function Today({ data }) {
     <table className={classes.table}>
       <thead>
         <tr>
-          <th colSpan={2} className={classes.material}>
+          <th colSpan={2} className={classes.character}>
             Character
           </th>
           <th colSpan={2} className={classes.material}>

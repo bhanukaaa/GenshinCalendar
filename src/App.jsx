@@ -216,13 +216,14 @@ function App() {
       <hr />
       <main>
         <div>
-          <h1>
-            Farmable Today (
-            <span style={{ color: "rgb(245, 120, 120)" }}>
+          <div style={{ display: "flex", justifyContent: "space-between" }}>
+            <h1 style={{ fontSize: "45px", paddingLeft: "10px" }}>
+              Farmable Today
+            </h1>
+            <h1 style={{ fontSize: "45px", paddingRight: "10px" }}>
               {todayDayDisplay}
-            </span>
-            )
-          </h1>
+            </h1>
+          </div>
           {TodayData.length > 0 ? (
             <Today data={TodayData} />
           ) : (
@@ -241,7 +242,9 @@ function App() {
         </div>
         <hr />
         <div>
-          <h1>Weekly Distribution</h1>
+          <h1 style={{ paddingLeft: "10px", fontSize: "45px" }}>
+            Weekly Distribution
+          </h1>
           <WeeklyDist data={weeklyData} />
         </div>
       </main>

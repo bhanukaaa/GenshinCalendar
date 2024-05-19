@@ -2,8 +2,10 @@
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
+  font-family: genshinFont;
 }
 
-h1 {
-  font-size: 40px;
+@font-face {
+  font-family: genshinFont;
+  src: url("../public/zh-cn.ttf");
 }

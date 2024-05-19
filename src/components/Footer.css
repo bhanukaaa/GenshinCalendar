@@ -10,6 +10,7 @@
 
 .footer-content {
   display: flex;
+  font-family: monospace;
   flex-direction: column;
   align-items: center;
 }

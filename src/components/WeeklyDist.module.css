@@ -5,6 +5,11 @@
 
 .heading {
   padding-left: 20px;
+  font-size: 28px;
+}
+
+.regText {
+  padding-left: 30px;
 }
 
 .week {
